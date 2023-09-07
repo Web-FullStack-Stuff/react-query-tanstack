@@ -1,0 +1,59 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active {
+    @apply outline outline-2 outline-purple-600
+  }
+  .nav-item {
+    @apply h-10 text-center rounded-lg px-4 py-1.5 dark-mode-bg cursor-pointer;
+  }
+
+  .dark-mode-bg {
+    @apply bg-slate-200 dark:bg-slate-800;
+  }
+
+  .post-list-card {
+    @apply cursor-text dark-mode-bg rounded-xl px-3 py-2 h-32 hover:shadow-md;
+  }
+  .post-list-card-pulse {
+    @apply cursor-wait dark-mode-bg rounded-xl px-3 py-2;
+  }
+
+  .input-element {
+    @apply dark-mode-bg px-3 py-2 rounded-lg w-full border border-slate-300 
+        focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      invalid:border-orange-500 invalid:text-orange-600
+      focus:invalid:border-orange-500 focus:invalid:ring-orange-500;
+  }
+  .submit-button {
+    @apply bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-3 py-2 rounded-lg text-slate-100
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
